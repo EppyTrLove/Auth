@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NikEp.Auth.Domain", "src\NikEp.Auth.Domain\NikEp.Auth.Domain.csproj", "{C214B647-216F-43A3-8B3F-DA7197088F07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Новая папка1", "Новая папка1", "{684A18C2-7993-4914-A51A-09EA3EDDB175}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C214B647-216F-43A3-8B3F-DA7197088F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C214B647-216F-43A3-8B3F-DA7197088F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C214B647-216F-43A3-8B3F-DA7197088F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C214B647-216F-43A3-8B3F-DA7197088F07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD156C82-1933-40D9-851F-3AB859EA2D62}
+	EndGlobalSection
+EndGlobal
