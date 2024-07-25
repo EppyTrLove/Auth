@@ -37,7 +37,6 @@ namespace NikEp.Auth.Domain.Entities
         public Name Name { get; set; }
 
         [Required]
-        [Range(16, 120, ErrorMessage = "Age must be between 16 and 120")]
         public Age Age { get; set; }
 
         [Required]

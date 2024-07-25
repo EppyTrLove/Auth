@@ -2,7 +2,7 @@
 
 namespace NikEp.Auth.Domain.ValueObjects
 {
-    public class Name
+    public record Name
     {
         private static string _value { get; set; }
         private Name(string value) 
