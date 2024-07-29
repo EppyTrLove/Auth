@@ -1,5 +1,4 @@
 ﻿
-
 namespace NikEp.Auth.Domain.ValueObjects
 {
     public record class Id
