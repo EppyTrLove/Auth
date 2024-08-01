@@ -10,15 +10,6 @@ namespace NikEp.Auth.Domain.ValueObjects
             _value = value;
         }
 
-        //public static Name Create(string first, string last)
-        //{
-        //    Regex regex = new Regex(@"^[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+$");
-        //    if (!String.IsNullOrEmpty(string.Concat(first, last).Trim()) & regex.IsMatch(first) & regex.IsMatch(last))
-        //    {
-        //        return new Name(first, last);
-        //    }
-        //    else throw new ArgumentException();
-        //}
         public static (bool IsSucsess, string Message, Name Value) Create(string value)
         {
            

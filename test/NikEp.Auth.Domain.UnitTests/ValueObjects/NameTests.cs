@@ -10,7 +10,7 @@ namespace NikEp.Auth.Domain.UnitTests.ValueObjects
     {
         [Theory]
         [TestCase(null, false)]
-        public void Create_(string? value, bool expectedSucsess)
+        public void CreateTest_(string? value, bool expectedSucsess)
         {
             // Arrange
             //Act
@@ -19,5 +19,8 @@ namespace NikEp.Auth.Domain.UnitTests.ValueObjects
             isSucsess.Should().Be(expectedSucsess);
             Assert.That(isSucsess, Is.EqualTo(expectedSucsess));
         }
+
+        [Theory]
+        [TestCase(string, false)]
     }
 }
