@@ -19,17 +19,20 @@ namespace NikEp.Auth.Domain.Entities
         public User(Email email, string password, Name name, DateTime birthDate,
             PhoneNumber phoneNumber, Id id)
         {
+            // Checks
+            if (password.Length < 3 || password.Length > 10)
+                throw new ArgumentException("Wrong password. Please, try again.");
+
             Email = email;
-            if (Enumerable.Range(3, 10).Contains(password.Length))
-            {
-                Password = password;
-            }
-            else throw new ArgumentException("Wrong password. Please, try again.");
+            Password = password;
             Name = name;
             BirthDate = birthDate;
             PhoneNumber = phoneNumber;
             CreatedAt = DateTime.UtcNow;
             Id = id;
+            
+            // Return
+            //...
         }
     }
 }
