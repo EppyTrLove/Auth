@@ -53,11 +53,9 @@ namespace NikEp.Auth.Domain.UnitTests.ValueObjects
         [TestCase(" ")] 
         public void Create_InvalidName_Fail(string? value)
         {
-            // Arrange
-            //Act
-            var (isSucsess, _, result) = Name.Create(value!);
-            //Assert
-            isSucsess.Should().Be(false);
+            var act = () => new Name(value!);
+
+            act.Should().Throw<ArgumentException>();
         }
     }
 }
