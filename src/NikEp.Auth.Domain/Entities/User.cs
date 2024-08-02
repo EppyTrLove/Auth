@@ -4,15 +4,15 @@ namespace NikEp.Auth.Domain.Entities
 {
     public class User
     {
-        public Email Email { get; set; }
-        public string Password { get; set; }
-        public string ConfirmPassword { get; set; }
-        public Name Name { get; set; }
-        public DateTime BirthDate { get; set; }
-        public PhoneNumber PhoneNumber { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime? LoggedinAt { get; set; }
-        private Id Id { get; set; }
+        public Email Email { get; }
+        public string Password { get; }
+        public string ConfirmPassword { get; }
+        public Name Name { get; }
+        public DateTime BirthDate { get; }
+        public PhoneNumber PhoneNumber { get; }
+        public DateTime CreatedAt { get; }
+        public DateTime? LoggedinAt { get; }
+        private Id Id { get; }
         
 
         public User(Email email, string password, Name name, DateTime birthDate,
@@ -30,8 +30,6 @@ namespace NikEp.Auth.Domain.Entities
             CreatedAt = DateTime.UtcNow;
             Id = id;
         }
-
-
     }
 }
 
