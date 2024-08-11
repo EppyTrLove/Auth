@@ -2,7 +2,7 @@
 
 namespace NikEp.Auth.Domain.ValueObjects
 {
-    public record class Id
+    public record Id
     {
         private long DatacenterId { get; set; }
         private long InstanceId { get; set; }
