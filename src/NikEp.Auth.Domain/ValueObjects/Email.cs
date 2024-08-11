@@ -9,7 +9,7 @@ namespace NikEp.Auth.Domain.ValueObjects
 {
     public record class Email
     {
-        private static string _value { get; set; }
+        private string _value { get; set; }
         private Email(string value)
         {
             _value = value;
