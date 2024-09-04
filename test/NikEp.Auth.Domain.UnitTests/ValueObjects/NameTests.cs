@@ -8,17 +8,16 @@ namespace NikEp.Auth.Domain.UnitTests.ValueObjects
         [Test]
         public void Create_HappyPath()
         {
-            var (isSucsess, _, result) = Name.Create("sdfsdf");
+            var name = new Name("sdfsdf");
 
             //Assert
-            isSucsess.Should().Be(true);
-            result.Value.Should().Be("sdfsdf");
+            name.Value.Should().Be("sdfsdf");
         }
 
         [Test]
         public void Create_SmokeTest()
         {
-            Name.Create("sdfsdf");
+            var _ = new Name("sdfsdf");
         }
         
         [Theory]
@@ -27,11 +26,9 @@ namespace NikEp.Auth.Domain.UnitTests.ValueObjects
         [TestCase("__nagibatior__")]
         public void Create_StrangeNames_Success(string value)
         {
-            var (isSucsess, _, result) = Name.Create(value);
-            
-            //Assert
-            isSucsess.Should().Be(true);
-            result.Value.Should().Be(value);
+            var name = new Name(value);
+
+            name.Value.Should().Be(value);
         }
         
         [Theory]

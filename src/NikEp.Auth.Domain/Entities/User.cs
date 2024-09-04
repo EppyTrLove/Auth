@@ -5,11 +5,7 @@ namespace NikEp.Auth.Domain.Entities
     public class User
     {
         private Id Id { get; }
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 90003e8091d1a444999f3e2ddfd16409a1a6f54a
         public Name Name { get; }
         public Email Email { get; }
         public PhoneNumber PhoneNumber { get; }
@@ -18,11 +14,7 @@ namespace NikEp.Auth.Domain.Entities
         public DateTime BirthDate { get; }
         public DateTime CreatedAt { get; }
         public DateTime? LoggedinAt { get; }
-<<<<<<< HEAD
-        
-=======
->>>>>>> 90003e8091d1a444999f3e2ddfd16409a1a6f54a
-        
+
 
         public User(Email email, string password, Name name, DateTime birthDate,
             PhoneNumber phoneNumber, Id id)

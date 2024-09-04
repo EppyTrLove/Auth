@@ -8,7 +8,7 @@ namespace NikEp.Auth.Domain.ValueObjects
         
         public Name(string value) 
         {
-            var regex = new Regex(@"^[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+$");
+            var regex = new Regex(@"/^([а-яё\s]+|[a-z\s]+)$/iu");
             if (String.IsNullOrEmpty(value)) 
                 throw new ArgumentException("You entered an empty name");
             if(!regex.IsMatch(value.Trim())) 
