@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NikEp.Auth.Contracts\NikEp.Auth.Contracts.csproj" />
+    <ProjectReference Include="..\NikEp.Auth.Persistance\NikEp.Auth.Persistance.csproj" />
+    <ProjectReference Include="..\src\NikEp.Auth.Domain\NikEp.Auth.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

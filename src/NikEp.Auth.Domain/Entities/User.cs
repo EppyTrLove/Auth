@@ -1,10 +1,11 @@
 ﻿using NikEp.Auth.Domain.ValueObjects;
+using System.Xml.Linq;
 
 namespace NikEp.Auth.Domain.Entities
 {
     public class User
     {
-        private Id Id { get; }
+        public Guid Id { get; }
 
         public Name Name { get; }
         public Email Email { get; }
@@ -15,10 +16,19 @@ namespace NikEp.Auth.Domain.Entities
         public DateTime CreatedAt { get; }
         public DateTime? LoggedinAt { get; }
 
-
-        public User(Email email, string password, Name name, DateTime birthDate,
-            PhoneNumber phoneNumber, Id id)
+        protected User(Guid id, string firstName, string lastName, string email, string phoneNumber, DateTime birthDate,
+            DateTime createdAt, string password)
         {
+            Id = id;
+            Name = new Name(firstName, lastName);
+            Email = new Email(email);
+            PhoneNumber = new PhoneNumber(phoneNumber);
+            BirthDate = birthDate;
+            CreatedAt = createdAt;
+            Password = password;
+        }
+            public User(Name name, Email email, PhoneNumber phoneNumber, DateTime birthDate, string password)
+            {
             // Checks
             if (password.Length < 3 || password.Length > 10)
                 throw new ArgumentException("Wrong password. Please, try again.");
@@ -29,7 +39,6 @@ namespace NikEp.Auth.Domain.Entities
             BirthDate = birthDate;
             PhoneNumber = phoneNumber;
             CreatedAt = DateTime.UtcNow;
-            Id = id;
             
             // Return
             //...
