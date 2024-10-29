@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using NikEp.Auth.Application;
+using NikEp.Auth.Application.Users;
 using NikEp.Auth.Contracts;
+
 
 namespace NikEp.Auth.Api.Controllers
 {
@@ -15,10 +16,10 @@ namespace NikEp.Auth.Api.Controllers
             _handler = handler;
         }
         [HttpPost("[action]")]
-        public RegisterUserResponse Register(RegisterUserRequest request)
+        public async Task<RegisterUserResponse> Register(RegisterUserRequest request)
         {
-            var user = _handler.Execute(request);
-            return new RegisterUserResponse(user.Id.ToString());
+            var user = await _handler.Execute(request);
+            return new RegisterUserResponse(user.Id);
         }
 
     }
