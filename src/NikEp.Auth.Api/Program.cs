@@ -1,8 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using NikEp.Auth.Application.Users;
 using NikEp.Auth.Persistence;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.ClearProviders();
+builder.Host.UseSerilog((context, config) =>
+config.ReadFrom.Configuration(context.Configuration));
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AuthDbContext>(options =>

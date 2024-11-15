@@ -18,6 +18,7 @@ public class User : Entity<User, UserValidator>
         Name = name;
         Email = email;
         PhoneNumber = phoneNumber;
+
         Validator.ValidateAndThrow(this);
     }
     

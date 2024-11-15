@@ -1,0 +1,1 @@
+dotnet ef migrations remove -s src/NikEp.Auth.Api -p src/NikEp.Auth.Persistance

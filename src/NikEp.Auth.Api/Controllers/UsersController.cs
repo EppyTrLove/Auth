@@ -29,9 +29,11 @@ public class UsersController(
     }
     
     [HttpGet("[action]/{id}")]
-    public async Task<User?> Get(Guid id)
+    public async Task<UserResponse?> Get(Guid id)
     {
-        return await context.Users.FindAsync(id);
+        var user = await context.Users.FindAsync(id);
+        if (user == null) return null;
+        return new UserResponse(user.Id, user.Name.FirstName, user.Name.LastName, user.Email._email, user.PhoneNumber._phoneNumber);
     }
     
     [HttpGet("[action]")]

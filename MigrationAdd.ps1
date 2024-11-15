@@ -1,0 +1,1 @@
+dotnet ef migrations add $args[0] -s src/NikEp.Auth.Api -p src/NikEp.Auth.Persistance
