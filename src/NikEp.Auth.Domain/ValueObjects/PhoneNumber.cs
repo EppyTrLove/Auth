@@ -9,7 +9,7 @@ namespace NikEp.Auth.Domain.ValueObjects
         {
             public const int MinimumLength = 5;
             public const int MaximumLength = 40;
-            private static Regex regex = new(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$");
+            private static Regex regex = new(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}");
 
             public PhoneNumberValidator()
             {

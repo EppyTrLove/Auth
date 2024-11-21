@@ -8,6 +8,8 @@ public class UserValidator : Validator<User>
     public UserValidator()
     {
         RulesFor(name => name.Name, new NameValidator());
+        RulesFor(email => email.Email, new EmailValidator());
+        RulesFor(phoneNumber => phoneNumber.PhoneNumber, new PhoneNumberValidator());
     }
 }
 

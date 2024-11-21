@@ -18,8 +18,8 @@ namespace NikEp.Auth.Domain.ValueObjects
         public static IRuleBuilderOptions<T, string> EmailRules<T>(IRuleBuilder<T, string> ruleBuilder) => ruleBuilder
             .NotEmpty()
             .MinimumLength(MinimumLength)
-            .MaximumLength(MaximumLength);
-           // .Matches(regex);
+            .MaximumLength(MaximumLength)
+            .Matches(regex);
     }
 
     public record Email : ValueObject<Email, EmailValidator>
