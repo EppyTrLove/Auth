@@ -1,23 +1,37 @@
-﻿using System.Text.RegularExpressions;
+﻿using FluentValidation;
+using System.Text.RegularExpressions;
 
 namespace NikEp.Auth.Domain.ValueObjects
 {
-    public record Email
+    public class EmailValidator : Validator<Email>
     {
-        public string Value { get; private set; }
-        public Email(string value)
-        {
-            var regex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*" + "@"
+        public const int MinimumLength = 2;
+        public const int MaximumLength = 30;
+        private static Regex regex = new(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*" + "@"
                 + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
 
-            if (String.IsNullOrEmpty(value))
-                throw new ArgumentException("Emty Email");
-            if (!regex.IsMatch(value.Trim()))
-                throw new ArgumentException("Not a valid email");
-
-            Value = value;
+        public EmailValidator()
+        {
+            RulesFor(email => email._email, EmailRules);
         }
+
+        public static IRuleBuilderOptions<T, string> EmailRules<T>(IRuleBuilder<T, string> ruleBuilder) => ruleBuilder
+            .NotEmpty()
+            .MinimumLength(MinimumLength)
+            .MaximumLength(MaximumLength)
+            .Matches(regex);
+    }
+
+    public record Email : ValueObject<Email, EmailValidator>
+    {
+        public Email(string email)
+        {
+            _email = email;
+           Validator.ValidateAndThrow(this);
+        }
+
+        public string _email { get; private set; }
     }
 }
 
-        
+ 

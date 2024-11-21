@@ -11,6 +11,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2EC1E9AC-A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NikEp.Auth.Domain.UnitTests", "test\NikEp.Auth.Domain.UnitTests\NikEp.Auth.Domain.UnitTests.csproj", "{EB151C26-B617-4027-BE1C-C3EE25F58FDF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NikEp.Auth.Api", "src\NikEp.Auth.Api\NikEp.Auth.Api.csproj", "{5CA92C63-291F-4952-98B3-10D132FDEB00}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NikEp.Auth.Contracts", "src\NikEp.Auth.Contracts\NikEp.Auth.Contracts.csproj", "{7853D432-8D39-4F88-8302-E5D0207CAAF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NikEp.Auth.Persistance", "src\NikEp.Auth.Persistance\NikEp.Auth.Persistance.csproj", "{11159820-3B31-4031-BF78-280AE08CBF11}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NikEp.Auth.Application", "src\NikEp.Auth.Application\NikEp.Auth.Application.csproj", "{1D071CC8-27DD-4F5E-9DB3-5CC24BA22C83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{7ABE1872-19AC-4C1B-B880-4BAEB1B5B999}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+		MigrationAdd.ps1 = MigrationAdd.ps1
+		MigrationRemove.ps1 = MigrationRemove.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +40,22 @@ Global
 		{EB151C26-B617-4027-BE1C-C3EE25F58FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB151C26-B617-4027-BE1C-C3EE25F58FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB151C26-B617-4027-BE1C-C3EE25F58FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CA92C63-291F-4952-98B3-10D132FDEB00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA92C63-291F-4952-98B3-10D132FDEB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA92C63-291F-4952-98B3-10D132FDEB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA92C63-291F-4952-98B3-10D132FDEB00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7853D432-8D39-4F88-8302-E5D0207CAAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7853D432-8D39-4F88-8302-E5D0207CAAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7853D432-8D39-4F88-8302-E5D0207CAAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7853D432-8D39-4F88-8302-E5D0207CAAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11159820-3B31-4031-BF78-280AE08CBF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11159820-3B31-4031-BF78-280AE08CBF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11159820-3B31-4031-BF78-280AE08CBF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11159820-3B31-4031-BF78-280AE08CBF11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D071CC8-27DD-4F5E-9DB3-5CC24BA22C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D071CC8-27DD-4F5E-9DB3-5CC24BA22C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D071CC8-27DD-4F5E-9DB3-5CC24BA22C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D071CC8-27DD-4F5E-9DB3-5CC24BA22C83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +63,10 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C214B647-216F-43A3-8B3F-DA7197088F07} = {684A18C2-7993-4914-A51A-09EA3EDDB175}
 		{EB151C26-B617-4027-BE1C-C3EE25F58FDF} = {2EC1E9AC-A9C1-4569-982A-51E04CAE3034}
+		{5CA92C63-291F-4952-98B3-10D132FDEB00} = {684A18C2-7993-4914-A51A-09EA3EDDB175}
+		{7853D432-8D39-4F88-8302-E5D0207CAAF2} = {684A18C2-7993-4914-A51A-09EA3EDDB175}
+		{11159820-3B31-4031-BF78-280AE08CBF11} = {684A18C2-7993-4914-A51A-09EA3EDDB175}
+		{1D071CC8-27DD-4F5E-9DB3-5CC24BA22C83} = {684A18C2-7993-4914-A51A-09EA3EDDB175}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD156C82-1933-40D9-851F-3AB859EA2D62}
